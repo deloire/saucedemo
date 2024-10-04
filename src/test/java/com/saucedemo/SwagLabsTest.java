@@ -7,8 +7,10 @@ public class SwagLabsTest extends BaseTest {
     public final static String URL = "https://www.saucedemo.com";
 
     @Test
-    public void saucedemoUiTest() {
+    public void saucedemoFirstItemTest() {
         LoginPage loginPage = new LoginPage(URL);
+        InventoryPage inventoryPage = new InventoryPage();
         loginPage.login(loginPage.getUsername(), loginPage.getPassword());
+        inventoryPage.getXpath().getFirst().click();
     }
 }
