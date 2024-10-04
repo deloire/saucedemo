@@ -5,7 +5,6 @@ import com.codeborne.selenide.SelenideElement;
 
 
 import java.util.ArrayList;
-import java.util.List;
 
 import static com.codeborne.selenide.Selenide.$$x;
 
