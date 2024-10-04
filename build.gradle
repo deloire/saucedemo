@@ -14,6 +14,7 @@ dependencies {
     testImplementation 'org.junit.jupiter:junit-jupiter'
     testImplementation 'com.codeborne:selenide:7.5.0'
     testImplementation 'org.seleniumhq.selenium:selenium-java:4.25.0'
+    implementation 'com.github.javafaker:javafaker:1.0.2'
 }
 
 test {

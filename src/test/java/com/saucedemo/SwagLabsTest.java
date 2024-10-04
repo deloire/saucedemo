@@ -14,11 +14,14 @@ public class SwagLabsTest extends BaseTest {
         LoginPage loginPage = new LoginPage(URL);
         InventoryPage inventoryPage = new InventoryPage();
         CartPage cartPage = new CartPage();
+        InformationPage informationPage = new InformationPage();
 
         loginPage.login(loginPage.getUsername(), loginPage.getPassword());
         for (SelenideElement cart: inventoryPage.itemToCart()) {
             cart.click();
         }
         cartPage.toShopping();
+        informationPage.fillInformation();
+
     }
 }
