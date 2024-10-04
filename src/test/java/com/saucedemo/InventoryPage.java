@@ -10,20 +10,15 @@ import java.util.List;
 import static com.codeborne.selenide.Selenide.$$x;
 
 public class InventoryPage {
-    private final ElementsCollection itemsPrice = $$x("//div[@class='pricebar']//div");
-    private final ElementsCollection itemsXpath = $$x("//div[@class='inventory_item_img']//a");
+    private final ElementsCollection addToCartButtons = $$x("//div[@class='pricebar']//button");
 
 
-    public List<String> getItemPrice() {
-        return itemsPrice.texts();
-    }
-
-    public List<SelenideElement> getXpath() {
-        List<SelenideElement> elementsXpath = new ArrayList<>();
-        for (SelenideElement xpath: itemsXpath) {
-            elementsXpath.add(xpath);
+    public ArrayList<SelenideElement> itemToCart() {
+        ArrayList<SelenideElement> items = new ArrayList<>();
+        for (SelenideElement item: addToCartButtons) {
+            items.add(item);
         }
-        return elementsXpath;
+        return items;
     }
 
 }
