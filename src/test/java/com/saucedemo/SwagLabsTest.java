@@ -16,6 +16,7 @@ public class SwagLabsTest extends BaseTest {
         CartPage cartPage = new CartPage();
         InformationPage informationPage = new InformationPage();
         OverviewPage overviewPage = new OverviewPage();
+        CompletePage completePage = new CompletePage();
 
         loginPage.login(loginPage.getUsername(), loginPage.getPassword());
         for (SelenideElement cart: inventoryPage.itemToCart()) {
@@ -25,6 +26,7 @@ public class SwagLabsTest extends BaseTest {
         informationPage.fillInformation();
         System.out.println(overviewPage.getTotalPrice());
         overviewPage.clickFinish();
+        Assertions.assertTrue(completePage.headerText().contains("order"));
 
     }
 }
