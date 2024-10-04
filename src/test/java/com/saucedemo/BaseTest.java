@@ -9,8 +9,7 @@ abstract public class BaseTest {
     public void setUp() {
         Configuration.browser = "chrome";
         Configuration.browserSize = "1280x720";
-        Configuration.headless = false;
-        Configuration.holdBrowserOpen = true;
+        Configuration.headless = true;
     }
 
     @BeforeEach
